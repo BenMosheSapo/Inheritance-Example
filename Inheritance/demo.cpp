@@ -12,7 +12,8 @@ public:
 	void whoAmI(void){
 		cout << "I am " << name << endl;
 	}
-	virtual void does(void){
+	virtual void does(void){				// Once this function is declasrd as virtual in higher class then in all derived classes that function will be
+											// virtual even if don't declare it but it is good practice to declare it in every one of the derived classes
 		cout << "do nothing" << endl;
 	}
 };
