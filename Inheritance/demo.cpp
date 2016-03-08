@@ -12,7 +12,7 @@ public:
 	void whoAmI(void){
 		cout << "I am " << name << endl;
 	}
-	void does(void){
+	virtual void does(void){
 		cout << "do nothing" << endl;
 	}
 };
@@ -45,5 +45,7 @@ int main(){
 	cout << "Dogs have " << myDog.howManyLegs() << " legs" << endl;
 	cout << "Using the base pointer to access derived class object" << endl;
 	AnimalPtr->whoAmI();
+	AnimalPtr->does();
+	AnimalPtr = &myAnimal;
 	AnimalPtr->does();
 }
