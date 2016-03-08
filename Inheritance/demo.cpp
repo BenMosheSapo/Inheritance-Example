@@ -36,9 +36,14 @@ public:
 int main(){
 	Animal myAnimal;
 	Dog myDog; 
+	Animal *AnimalPtr;
+	AnimalPtr = &myDog;
 	myAnimal.whoAmI();
 	myAnimal.does();
 	myDog.whoAmI();
 	myDog.does();
 	cout << "Dogs have " << myDog.howManyLegs() << " legs" << endl;
+	cout << "Using the base pointer to access derived class object" << endl;
+	AnimalPtr->whoAmI();
+	AnimalPtr->does();
 }
