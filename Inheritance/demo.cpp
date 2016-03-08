@@ -18,9 +18,18 @@ public:
 };
 
 class Dog : public Animal{
+protected:
+	int numberLegs;
 public:
 	Dog(){
 		name = "dog";
+		numberLegs = 4;
+	}
+	void does(void){
+		cout << "Woof!" << endl;
+	}
+	int howManyLegs(){
+		return numberLegs;
 	}
 };
 
@@ -31,5 +40,5 @@ int main(){
 	myAnimal.does();
 	myDog.whoAmI();
 	myDog.does();
-
+	cout << "Dogs have " << myDog.howManyLegs() << " legs" << endl;
 }
